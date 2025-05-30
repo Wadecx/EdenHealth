@@ -407,7 +407,7 @@ export const MENUS: Menu[] = [
   {
     title: 'Special Healthy', // Section Special Healthy A voir pour les allergen ce n'est pas préciser
     image: {
-      src: '/assets/images/healthy-bowls-cover.png',
+      src: '/assets/images/cover-special-healthy.jpeg',
       alt: 'Healthy bowls',
     },
     href: 'nos-special-healthy',

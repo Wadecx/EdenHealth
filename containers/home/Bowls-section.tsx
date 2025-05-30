@@ -31,18 +31,45 @@ const BOLWS = [
     specificities: [],
   },
   {
-    name: 'FRESH TUNA HEALTHY BOWL',
+    name: 'SALMON HEALTHY BOWL',
     image: {
-      src: '/assets/images/menus/fresh-tuna-healthy-bowl.png',
+      src: '/assets/images/menus/salmon-healthy-bowl.png',
       alt: "Photo d'un burger",
     },
     priceByUnit: '14,90€',
     specificities: [],
   },
   {
-    name: 'SALMON HEALTHY BOWL',
+    name: 'RED KIDNEY HEALTHY BOWL',
     image: {
-      src: '/assets/images/menus/salmon-healthy-bowl.png',
+      src: '/assets/images/menus/red-kidney-healthy-bowl.png',
+      alt: "Photo d'un burger",
+    },
+    priceByUnit: '11,90€',
+    specificities: [],
+  },
+  {
+    name: 'SHRIMP HEALTHY BOWL',
+    image: {
+      src: '/assets/images/menus/shrimp-healthy-bowl.png',
+      alt: "Photo d'un burger",
+    },
+    priceByUnit: '14,90€',
+    specificities: [],
+  },
+  {
+    name: 'VEGGIE HEALTHY BOWL',
+    image: {
+      src: '/assets/images/menus/veggie-healthy-bowl.png',
+      alt: "Photo d'un burger",
+    },
+    priceByUnit: '13,90€',
+    specificities: [],
+  },
+  {
+    name: 'SPICY HEALTHY BOWL',
+    image: {
+      src: '/assets/images/menus/spicy-healthy-bowl.png',
       alt: "Photo d'un burger",
     },
     priceByUnit: '14,90€',

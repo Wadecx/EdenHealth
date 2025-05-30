@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { AnimateContainer } from '@/animations';
+import { AnimateContainer } from "@/animations";
 import {
   Drawer,
   DrawerClose,
@@ -11,42 +11,42 @@ import {
   DrawerTitle,
   DrawerTrigger,
   Section,
-} from '@/components';
-import { RadioButton } from '@/components/common/Radio';
-import { MENUS } from '@/data/menus.data';
-import { cn } from '@/libs/utils';
-import { Allergen, MenuItem as IMenuItem, Menu } from '@/types';
-import { AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { useState } from 'react';
+} from "@/components";
+import { RadioButton } from "@/components/common/Radio";
+import { MENUS } from "@/data/menus.data";
+import { cn } from "@/libs/utils";
+import { Allergen, MenuItem as IMenuItem, Menu } from "@/types";
+import { AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { useState } from "react";
 
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/common/Accordion';
-import { X } from 'lucide-react';
+} from "@/components/common/Accordion";
+import { X } from "lucide-react";
 
 export const MenuContainer: React.FC = () => {
-  const [selectedPreference, setSelectedPreference] = useState<string>('');
-  const [selectedAllergy, setSelectedAllergy] = useState<string>('');
+  const [selectedPreference, setSelectedPreference] = useState<string>("");
+  const [selectedAllergy, setSelectedAllergy] = useState<string>("");
 
   const handleFilter = (): Menu[] => {
     return MENUS.map((category) => ({
       ...category,
       items: category.items.filter((item) => {
         const preferenceMatch =
-          selectedPreference === ''
+          selectedPreference === ""
             ? true
-            : selectedPreference === 'Vegan'
+            : selectedPreference === "Vegan"
             ? item.preferences.isVegan
-            : selectedPreference === 'Végétarien'
+            : selectedPreference === "Végétarien"
             ? item.preferences.isVegetarian
             : true;
 
         const allergyMatch =
-          selectedAllergy === ''
+          selectedAllergy === ""
             ? true
             : !item.allergens.includes(
                 selectedAllergy.toLowerCase() as Allergen
@@ -90,22 +90,22 @@ const Filters: React.FC<FiltersProps> = ({
   selectedAllergy,
   setSelectedAllergy,
 }) => {
-  const preferences = ['', 'Végétarien', 'Vegan'];
+  const preferences = ["", "Végétarien", "Vegan"];
   const allergies = [
-    '',
-    'gluten',
-    'lactose',
-    'fruit à coques',
-    'poisson',
-    'oeuf',
-    'arachide',
-    'soja',
-    'sesame',
-    'céléri',
-    'moutarde',
-    'cereales',
-    'mollusques',
-    'sulfites',
+    "",
+    "gluten",
+    "lactose",
+    "fruit à coques",
+    "poisson",
+    "oeuf",
+    "arachide",
+    "soja",
+    "sesame",
+    "céléri",
+    "moutarde",
+    "cereales",
+    "mollusques",
+    "sulfites",
   ];
 
   const renderRadioGroup = (
@@ -131,9 +131,9 @@ const Filters: React.FC<FiltersProps> = ({
           }}
         >
           {!item
-            ? name === 'preference'
-              ? 'Toutes'
-              : 'Aucune'
+            ? name === "preference"
+              ? "Toutes"
+              : "Aucune"
             : item.charAt(0).toUpperCase() + item.slice(1)}
         </label>
       </div>
@@ -141,10 +141,10 @@ const Filters: React.FC<FiltersProps> = ({
   };
 
   const handleScrollIntoTopOnFilterClick = () => {
-    const menu = document.querySelector('#menu');
+    const menu = document.querySelector("#menu");
     if (menu) {
       const top = menu.getBoundingClientRect().top + window.scrollY - 100;
-      window.scrollTo({ top, behavior: 'smooth' });
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
@@ -153,7 +153,7 @@ const Filters: React.FC<FiltersProps> = ({
       <div className="w-1/5 lg:block hidden sticky top-24 h-fit p-4 bg-white border shadow-lg space-y-8 rounded-md max-h-[600px] overflow-y-scroll">
         <div className="flex items-center gap-2">
           <Image
-            src={'/assets/icons/filter.svg'}
+            src={"/assets/icons/filter.svg"}
             alt="Filtre icone"
             width={24}
             height={24}
@@ -172,7 +172,7 @@ const Filters: React.FC<FiltersProps> = ({
             preferences,
             selectedPreference,
             setSelectedPreference,
-            'preference'
+            "preference"
           )}
         </div>
         <div className="space-y-4">
@@ -185,7 +185,7 @@ const Filters: React.FC<FiltersProps> = ({
             allergies,
             selectedAllergy,
             setSelectedAllergy,
-            'allergy'
+            "allergy"
           )}
         </div>
 
@@ -207,7 +207,7 @@ const Filters: React.FC<FiltersProps> = ({
                     preferences,
                     selectedPreference,
                     setSelectedPreference,
-                    'preference'
+                    "preference"
                   )}
                 </div>
 
@@ -223,7 +223,7 @@ const Filters: React.FC<FiltersProps> = ({
                     allergies,
                     selectedAllergy,
                     setSelectedAllergy,
-                    'allergy'
+                    "allergy"
                   )}
                 </div>
               </div>
@@ -241,7 +241,7 @@ interface MenuDisplayProps {
 
 const Separator = ({ className }: { className?: string }) => {
   return (
-    <div className={cn('h-[0.85px] w-full bg-gray-300 my-4', className)}></div>
+    <div className={cn("h-[0.85px] w-full bg-gray-300 my-4", className)}></div>
   );
 };
 
@@ -268,13 +268,13 @@ const MenuDisplay: React.FC<MenuDisplayProps> = ({ filteredMenu }) => {
                     className="w-full object-cover max-h-[200px] rounded-xl"
                   />
                   <h2 className="text-xl font-black my-8">
-                    {category.title}{' '}
+                    {category.title}{" "}
                     <span className="text-pink font-normal text-[18px] uppercase">
-                      -{' '}
+                      -{" "}
                       {
                         filteredMenu.filter((c) => c.href === category.href)[0]
                           .items.length
-                      }{' '}
+                      }{" "}
                       Produits
                     </span>
                   </h2>
@@ -282,7 +282,7 @@ const MenuDisplay: React.FC<MenuDisplayProps> = ({ filteredMenu }) => {
 
                 <div
                   className={cn(
-                    'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-6 gap-y-16 mt-16'
+                    "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-6 gap-y-16 mt-16"
                   )}
                 >
                   <AnimatePresence>
@@ -324,26 +324,26 @@ const MenuItem = ({
 }) => {
   const renderAllergenIcon = (allergen: Allergen) => {
     switch (allergen) {
-      case 'gluten':
-        return '/assets/icons/gluten.png';
-      case 'lactose':
-        return '/assets/icons/lactose.png';
-      case 'crustace':
-        return '/assets/icons/crustace.png';
-      case 'oeuf':
-        return '/assets/icons/oeuf.png';
-      case 'poisson':
-        return '/assets/icons/poisson.png';
-      case 'soja':
-        return '/assets/icons/soja.png';
-      case 'celeri':
-        return '/assets/icons/celeri.png';
-      case 'sesame':
-        return '/assets/icons/sesame.png';
-      case 'fruit a coques':
-        return '/assets/icons/fruit-a-coques.png';
+      case "gluten":
+        return "/assets/icons/gluten.png";
+      case "lactose":
+        return "/assets/icons/lactose.png";
+      case "crustace":
+        return "/assets/icons/crustace.png";
+      case "oeuf":
+        return "/assets/icons/oeuf.png";
+      case "poisson":
+        return "/assets/icons/poisson.png";
+      case "soja":
+        return "/assets/icons/soja.png";
+      case "celeri":
+        return "/assets/icons/celeri.png";
+      case "sesame":
+        return "/assets/icons/sesame.png";
+      case "fruit a coques":
+        return "/assets/icons/fruit-a-coques.png";
       default:
-        return '/assets/icons/arachide.png';
+        return "/assets/icons/arachide.png";
     }
   };
   return (
@@ -351,9 +351,9 @@ const MenuItem = ({
       <DrawerTrigger asChild>
         <div className="flex cursor-pointer flex-col gap-4 bg-white rounded-2xl border shadow-xl justify-around h-[350px]">
           <div className="-mt-12">
-            {category === 'Finger food' ||
-            category === 'Détox & Mocktails' ||
-            category === 'Cool drink' ? (
+            {category === "Finger food" ||
+            category === "Détox & Mocktails" ||
+            category === "Cool drink" ? (
               <Image
                 src={item.image.src}
                 alt={item.image.alt}
@@ -362,20 +362,29 @@ const MenuItem = ({
                 quality={100}
                 className="mx-auto object-contain max-h-[240px]"
               />
-            ) : category === 'Desserts gourmands' ? (
+            ) : item.title === " Pavlova" ? (
+              <Image
+                src={item.image.src}
+                alt={item.image.alt}
+                width={270}
+                height={250}
+                quality={100}
+                className="mx-auto object-contain "
+              />
+            ) : category === "Desserts gourmands" && item.title !== "Pavlova" ? (
               <Image
                 src={item.image.src}
                 alt={item.image.alt}
                 width={200}
-                height={100}
+                height={200}
                 quality={100}
-                className="mx-auto object-contain"
+                className="mx-auto object-contain w-full max-w-[200px] h-[180px]"
               />
             ) : (
               <Image
                 src={item.image.src}
                 alt={item.image.alt}
-                width={250}
+                width={270}
                 height={200}
                 quality={100}
                 className="mx-auto object-contain"
@@ -383,7 +392,7 @@ const MenuItem = ({
             )}
           </div>
           <div className="-mt-8">
-            <p className={cn('uppercase font-black text-lg px-4')}>
+            <p className={cn("uppercase font-black text-lg px-4")}>
               {item.title}
             </p>
 
@@ -392,7 +401,7 @@ const MenuItem = ({
                 <small className="uppercase">1 pièce</small>
                 <p className="font-black">
                   {item.price.unit}
-                  {item.title !== '' && '0'}€
+                  {item.title !== "" && "0"}€
                 </p>
               </div>
 
@@ -424,9 +433,9 @@ const MenuItem = ({
         <DrawerHeader>
           <div className="flex flex-col pt-8 pl-8 md:flex-row items-center justify-between gap-12">
             <div>
-              {category === 'Finger food' ||
-              category === 'Détox & Mocktails' ||
-              category === 'Cool drink' ? (
+              {category === "Finger food" ||
+              category === "Détox & Mocktails" ||
+              category === "Cool drink" ? (
                 <Image
                   src={item.image.src}
                   alt={item.image.alt}
@@ -435,12 +444,22 @@ const MenuItem = ({
                   quality={100}
                   className="mx-auto object-contain max-h-[200px]"
                 />
-              ) : category === 'Desserts gourmands' ? (
+              ) : category === "Desserts gourmands" ? (
                 <Image
                   src={item.image.src}
                   alt={item.image.alt}
                   width={200}
                   height={100}
+                  quality={100}
+                  className="mx-auto object-contain"
+                />
+              ) : category === "Dessert gourmand" &&
+                item.title === "Pavlova" ? (
+                <Image
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  width={250}
+                  height={200}
                   quality={100}
                   className="mx-auto object-contain"
                 />

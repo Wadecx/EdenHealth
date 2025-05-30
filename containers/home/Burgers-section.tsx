@@ -48,6 +48,33 @@ const BURGERS = [
     priceByUnit: '16,90€',
     specificities: [],
   },
+  {
+    name: 'AVOCADO BURGER',
+    image: {
+      src: '/assets/images/menus/avocado-burger.png',
+      alt: "Photo d'un burger",
+    },
+    priceByUnit: '15,90€',
+    specificities: [],
+  },
+  {
+    name: 'SPICY BURGER',
+    image: {
+      src: '/assets/images/menus/spicy-burger.png',
+      alt: "Photo d'un burger",
+    },
+    priceByUnit: '15,90€',
+    specificities: [],
+  },
+  {
+    name: 'RED KIDNEY BURGER',
+    image: {
+      src: '/assets/images/menus/red-kidney-burger.png',
+      alt: "Photo d'un burger",
+    },
+    priceByUnit: '12,90€',
+    specificities: [],
+  },
 ];
 
 export const BurgersSection = () => {
