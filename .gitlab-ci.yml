@@ -1,0 +1,39 @@
+image: node:18-alpine
+
+stages:
+  - build
+  - deploy
+
+variables:
+  NEXT_PUBLIC_ENV: production
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .pnpm-store
+
+before_script:
+  - npm install -g corepack
+  - corepack prepare pnpm@latest --activate
+
+build:
+  stage: build
+  script:
+    - corepack enable
+    - pnpm install --frozen-lockfile
+    - pnpm run build
+  artifacts:
+    paths:
+      - out/
+
+deploy:
+  stage: deploy
+  script:
+    - apk update
+    - apk add --no-cache lftp
+    - lftp -c "open -u ${EDEN_HEALTH_FTP_USERNAME},${EDEN_HEALTH_FTP_PASSWORD} ${EDEN_HEALTH_FTP_HOST} && mirror -R out/ /public_html --delete"
+  dependencies:
+    - build
+  only:
+    - main
