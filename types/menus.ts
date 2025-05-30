@@ -14,6 +14,10 @@ export interface MenuItem {
   image: {
     src: string;
     alt: string;
+    size: {
+      width: number;
+      height: number;
+    };
   };
   price: {
     unit: number;
@@ -31,17 +35,17 @@ export interface MenuItem {
 }
 
 export type Allergen =
-  | 'lactose'
-  | 'gluten'
-  | 'crustace'
-  | 'oeuf'
-  | 'poisson'
-  | 'soja'
-  | 'celeri'
-  | 'sesame'
-  | 'fruit a coques'
-  | 'arachide'
-  | 'moutarde'
-  | 'sulfites'
-  | 'mollusques'
-  | 'cereales';
+  | "lactose"
+  | "gluten"
+  | "crustace"
+  | "oeuf"
+  | "poisson"
+  | "soja"
+  | "celeri"
+  | "sesame"
+  | "fruit a coques"
+  | "arachide"
+  | "moutarde"
+  | "sulfites"
+  | "mollusques"
+  | "cereales";

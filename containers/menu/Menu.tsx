@@ -349,47 +349,44 @@ const MenuItem = ({
   return (
     <Drawer>
       <DrawerTrigger asChild>
-        <div className="flex cursor-pointer flex-col gap-4 bg-white rounded-2xl border shadow-xl justify-around h-[350px]">
+        <div className="flex cursor-pointer flex-col bg-white rounded-2xl border shadow-xl justify-around h-[300px]">
           <div className="-mt-12">
             {category === "Finger food" ||
-            category === "Détox & Mocktails" ||
             category === "Cool drink" ? (
               <Image
                 src={item.image.src}
                 alt={item.image.alt}
-                width={175}
-                height={100}
+                width={item.image.size.width}
+                height={item.image.size.height}
                 quality={100}
                 className="mx-auto object-contain max-h-[240px]"
               />
-            ) : item.title === " Pavlova" ? (
+            ) : category === "Détox & Mocktails"  ? (
               <Image
                 src={item.image.src}
                 alt={item.image.alt}
-                width={270}
-                height={250}
+                width={item.image.size.width}
+                height={item.image.size.height}
                 quality={100}
-                className="mx-auto object-contain "
+                className="mx-auto object-contain flex mb-8"
               />
-            ) : category === "Desserts gourmands" && item.title !== "Pavlova" ? (
+            ) : category === "Desserts gourmands" && item.title === "Pavlova" ? (
               <Image
                 src={item.image.src}
                 alt={item.image.alt}
-                width={200}
-                height={200}
+                width={item.image.size.width}
+                height={item.image.size.height}
                 quality={100}
-                className="mx-auto object-contain w-full max-w-[200px] h-[180px]"
+                className="mx-auto object-contain relative top-8 mb-8 flex"
               />
-            ) : (
-              <Image
+            ) : <Image
                 src={item.image.src}
                 alt={item.image.alt}
-                width={270}
-                height={200}
+                width={item.image.size.width}
+                height={item.image.size.height}
                 quality={100}
                 className="mx-auto object-contain"
-              />
-            )}
+              /> }
           </div>
           <div className="-mt-8">
             <p className={cn("uppercase font-black text-lg px-4")}>
