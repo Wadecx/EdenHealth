@@ -265,7 +265,7 @@ const MenuDisplay: React.FC<MenuDisplayProps> = ({ filteredMenu }) => {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    className="w-full object-cover max-h-[200px] rounded-xl"
+                    className="w-full object-cover max-h-[200px] min-h-[200px] rounded-xl"
                   />
                   <h2 className="text-xl font-black my-8">
                     {category.title}{" "}

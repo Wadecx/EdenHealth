@@ -1017,48 +1017,48 @@ export const MENUS: Menu[] = [
         allergens: [],
         allergensFree: [],
       },
-      {
-        title: "Evian",
-        image: {
-          src: "/assets/images/menus/evian.png",
-          alt: "Evian",
-          size: {
-            width: 200,
-            height: 200,
-          },
-        },
-        description: "Bouteille de 50 cl",
-        price: {
-          unit: 3.5,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
-      {
-        title: "San Pellegrino",
-        image: {
-          src: "/assets/images/menus/san-pellegrino.png",
-          alt: "San Pellegrino",
-          size: {
-            width: 75,
-            height: 120,
-          },
-        },
-        description: "Bouteille de 50 cl",
-        price: {
-          unit: 3.5,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
+      // {
+      //   title: "Evian",
+      //   image: {
+      //     src: "/assets/images/menus/evian.png",
+      //     alt: "Evian",
+      //     size: {
+      //       width: 200,
+      //       height: 200,
+      //     },
+      //   },
+      //   description: "Bouteille de 50 cl",
+      //   price: {
+      //     unit: 3.5,
+      //   },
+      //   preferences: {
+      //     isVegan: false,
+      //     isVegetarian: false,
+      //   },
+      //   allergens: [],
+      //   allergensFree: [],
+      // },
+      // {
+      //   title: "San Pellegrino",
+      //   image: {
+      //     src: "/assets/images/menus/san-pellegrino.png",
+      //     alt: "San Pellegrino",
+      //     size: {
+      //       width: 75,
+      //       height: 120,
+      //     },
+      //   },
+      //   description: "Bouteille de 50 cl",
+      //   price: {
+      //     unit: 3.5,
+      //   },
+      //   preferences: {
+      //     isVegan: false,
+      //     isVegetarian: false,
+      //   },
+      //   allergens: [],
+      //   allergensFree: [],
+      // },
     ],
   },
   {
@@ -1307,146 +1307,146 @@ export const MENUS: Menu[] = [
       },
     ],
   },
-  {
-    title: "Bière Bio",
-    image: {
-      src: "/assets/images/biere-bio-cover.jpg",
-      alt: "Bière Bio",
-    },
-    href: "nos-biere-bio",
-    items: [
-      {
-        title: "Bière bio 85 Blonde",
-        image: {
-          src: "/assets/images/menus/biere-bio-85-blonde.png",
-          alt: "Bière bio 85 Blonde",
-          size: {
-            width: 130,
-            height: 120,
-          },
-        },
-        description:
-          "",
-        price: {
-          unit: 5.9,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
-      {
-        title: "Bière bio 85 Blanche",
-        image: {
-          src: "/assets/images/menus/biere-bio-85-blanche.png",
-          alt: "Bière bio 85 Blanche",
-          size: {
-            width: 130,
-            height: 120,
-          },
-        },
-        description:
-          "",
-        price: {
-          unit: 5.9,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
-      {
-        title: "Bière bio 85 IPA",
-        image: {
-          src: "/assets/images/menus/biere-bio-85-ipa.png",
-          alt: "Bière bio 85 ipa",
-          size: {
-            width: 130,
-            height: 120,
-          },
-        },
-        description:
-          "",
-        price: {
-          unit: 5.9,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
-      {
-        title: "Bière bio 85 Ambrée",
-        image: {
-          src: "/assets/images/menus/biere-bio-85-ambrée.png",
-          alt: "Bière bio 85 ambrée",
-          size: {
-            width: 130,
-            height: 120,
-          },
-        },
-        description:
-          "",
-        price: {
-          unit: 5.9,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
-      {
-        title: "Bière bio Lindmans-Cerise",
-        image: {
-          src: "/assets/images/menus/biere-bio-lindmans-cerise.png",
-          alt: "Bière bio Lindmans Cerise",
-          size: {
-            width: 120,
-            height: 120,
-          },
-        },
-        description:
-          "",
-        price: {
-          unit: 5.9,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
-      {
-        title: "Bière bio Lindmans-Framboise",
-        image: {
-          src: "/assets/images/menus/biere-bio-lindmans-framboise.png",
-          alt: "Bière bio Lindmans Framboise",
-          size: {
-            width: 120,
-            height: 120,
-          },
-        },
-        description:
-          "",
-        price: {
-          unit: 5.9,
-        },
-        preferences: {
-          isVegan: false,
-          isVegetarian: false,
-        },
-        allergens: [],
-        allergensFree: [],
-      },
-    ],
-  },
+  // {
+  //   title: "Bière Bio",
+  //   image: {
+  //     src: "/assets/images/biere-bio-cover.jpg",
+  //     alt: "Bière Bio",
+  //   },
+  //   href: "nos-biere-bio",
+  //   items: [
+  //     {
+  //       title: "Bière bio 85 Blonde",
+  //       image: {
+  //         src: "/assets/images/menus/biere-bio-85-blonde.png",
+  //         alt: "Bière bio 85 Blonde",
+  //         size: {
+  //           width: 130,
+  //           height: 120,
+  //         },
+  //       },
+  //       description:
+  //         "",
+  //       price: {
+  //         unit: 5.9,
+  //       },
+  //       preferences: {
+  //         isVegan: false,
+  //         isVegetarian: false,
+  //       },
+  //       allergens: [],
+  //       allergensFree: [],
+  //     },
+  //     {
+  //       title: "Bière bio 85 Blanche",
+  //       image: {
+  //         src: "/assets/images/menus/biere-bio-85-blanche.png",
+  //         alt: "Bière bio 85 Blanche",
+  //         size: {
+  //           width: 130,
+  //           height: 120,
+  //         },
+  //       },
+  //       description:
+  //         "",
+  //       price: {
+  //         unit: 5.9,
+  //       },
+  //       preferences: {
+  //         isVegan: false,
+  //         isVegetarian: false,
+  //       },
+  //       allergens: [],
+  //       allergensFree: [],
+  //     },
+  //     {
+  //       title: "Bière bio 85 IPA",
+  //       image: {
+  //         src: "/assets/images/menus/biere-bio-85-ipa.png",
+  //         alt: "Bière bio 85 ipa",
+  //         size: {
+  //           width: 130,
+  //           height: 120,
+  //         },
+  //       },
+  //       description:
+  //         "",
+  //       price: {
+  //         unit: 5.9,
+  //       },
+  //       preferences: {
+  //         isVegan: false,
+  //         isVegetarian: false,
+  //       },
+  //       allergens: [],
+  //       allergensFree: [],
+  //     },
+  //     {
+  //       title: "Bière bio 85 Ambrée",
+  //       image: {
+  //         src: "/assets/images/menus/biere-bio-85-ambrée.png",
+  //         alt: "Bière bio 85 ambrée",
+  //         size: {
+  //           width: 130,
+  //           height: 120,
+  //         },
+  //       },
+  //       description:
+  //         "",
+  //       price: {
+  //         unit: 5.9,
+  //       },
+  //       preferences: {
+  //         isVegan: false,
+  //         isVegetarian: false,
+  //       },
+  //       allergens: [],
+  //       allergensFree: [],
+  //     },
+  //     {
+  //       title: "Bière bio Lindmans-Cerise",
+  //       image: {
+  //         src: "/assets/images/menus/biere-bio-lindmans-cerise.png",
+  //         alt: "Bière bio Lindmans Cerise",
+  //         size: {
+  //           width: 120,
+  //           height: 120,
+  //         },
+  //       },
+  //       description:
+  //         "",
+  //       price: {
+  //         unit: 5.9,
+  //       },
+  //       preferences: {
+  //         isVegan: false,
+  //         isVegetarian: false,
+  //       },
+  //       allergens: [],
+  //       allergensFree: [],
+  //     },
+  //     {
+  //       title: "Bière bio Lindmans-Framboise",
+  //       image: {
+  //         src: "/assets/images/menus/biere-bio-lindmans-framboise.png",
+  //         alt: "Bière bio Lindmans Framboise",
+  //         size: {
+  //           width: 120,
+  //           height: 120,
+  //         },
+  //       },
+  //       description:
+  //         "",
+  //       price: {
+  //         unit: 5.9,
+  //       },
+  //       preferences: {
+  //         isVegan: false,
+  //         isVegetarian: false,
+  //       },
+  //       allergens: [],
+  //       allergensFree: [],
+  //     },
+  //   ],
+  // },
 ];
