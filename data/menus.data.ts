@@ -1017,6 +1017,48 @@ export const MENUS: Menu[] = [
         allergens: [],
         allergensFree: [],
       },
+      {
+        title: "Evian",
+        image: {
+          src: "/assets/images/menus/evian.png",
+          alt: "Evian",
+          size: {
+            width: 200,
+            height: 200,
+          },
+        },
+        description: "Bouteille de 50 cl",
+        price: {
+          unit: 3.5,
+        },
+        preferences: {
+          isVegan: false,
+          isVegetarian: false,
+        },
+        allergens: [],
+        allergensFree: [],
+      },
+      {
+        title: "San Pellegrino",
+        image: {
+          src: "/assets/images/menus/san-pellegrino.png",
+          alt: "San Pellegrino",
+          size: {
+            width: 75,
+            height: 120,
+          },
+        },
+        description: "Bouteille de 50 cl",
+        price: {
+          unit: 3.5,
+        },
+        preferences: {
+          isVegan: false,
+          isVegetarian: false,
+        },
+        allergens: [],
+        allergensFree: [],
+      },
     ],
   },
   {
